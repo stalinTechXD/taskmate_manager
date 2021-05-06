@@ -1,0 +1,36 @@
+ {% extends 'base.html' %}
+
+ <h1> dsfjsdklfj</h1>
+ {% block title %}
+    <title> Todo List Manage - Taskmate </title>
+
+  {% endblock title %}
+
+
+  {% block content %}
+  <br>
+  <br>
+    <div class= "container">
+         </br>
+  {% if task_obj.manager == request.user %}
+
+  <form method = "POST"  class="row">
+      {% csrf_token %}
+  
+      <label class="col-lg-4" > Your Tasks For Today? </label>
+      <input type="text" class="form-control col-lg-6"   name ='task' placeholder = "{{ task_obj.task }} " value =  "{{ task_obj.task }} "  >
+      <input type="hidden" class="form-control col-lg-6"   name ='done'   value =  "{{ task_obj.done }} "  >
+      <button type="submit" class="btn btn-primary col-lg-2">Update Task</button>
+      
+  
+    
+    
+  </form>
+
+  {% else %}
+<p> you can't access this page </p>
+
+  {% endif %}
+    </div>    
+
+   {% endblock content %} 

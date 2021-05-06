@@ -1,0 +1,36 @@
+
+ {% extends 'base.html' %}
+{% load static %}
+ <h1> dsfjsdklfj</h1>
+ {% block title %}
+    <title> Todo List Manage - Taskmate </title>
+
+  {% endblock title %}
+
+
+  {% block content %}
+  <br>
+  <br>
+    <div class= "container">
+     <div class='row mt-5'>
+    <div class='col-lg-4'>
+    <img src="{% static 'images/heelo.jpg' %}" alt='Notes' class="rounded-lg shadow" width="360" height = "250">
+    </div>
+      <div class='col-lg-4'>
+    
+       <img src="{% static 'images/stickynotes.jpg' %}" alt='Notes' class="rounded-lg shadow" width="360" height = "250">
+    </div>
+      <div class='col-lg-4'>
+   <img src="{% static 'images/stalin.jpg' %}" alt='Notes'class="rounded-lg shadow"  width="360" height = "250">
+    </div>
+
+    <div class = "row mt-5">
+  <div class ="col-md-10 offset-md-1">
+    <center> <p class="h1"> Qucik And Easy to use , anytime , anywhere! </p>  </center>
+      <center>  <p class="h2"> "Plan your day better , Get your life organized" </p>  </center>
+        <center> <p class="h3"> TASKMATE Lets you keep Track of your Task in one place </p>  </center>
+        <center><a href="{% url 'todolist' %}"><button  type="button" class="btn btn-primary btn-lg mt-3 shadow" >Let's Get Started </button></a></center>
+         </div>
+         <div>
+     </div>
+    {% endblock content %}
